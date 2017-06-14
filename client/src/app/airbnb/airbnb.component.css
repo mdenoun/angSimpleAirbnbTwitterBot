@@ -1,0 +1,22 @@
+.listing-pic img {
+  width: 70px;
+  height:70px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.panel {
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
+.viewport {
+  height: 100%;
+  overflow: auto;
+}
+.active .row {
+  background-color: lavender;
+}
+a .row:hover {
+  background-color: lavender;
+}

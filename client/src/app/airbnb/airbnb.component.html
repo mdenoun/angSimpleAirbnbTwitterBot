@@ -1,0 +1,55 @@
+<app-dropdown [items]="cities" (select)="onItemSelected($event)"></app-dropdown>
+<div class="container-fluid">
+  <div class="row panel">
+    <div class="viewport col-md-6 col-sm-6 col-xs-6">
+        <h3>Listing</h3>
+        <a href="#" (click)="displayReview(item)" *ngFor="let item of rbnbItems" [class.active]="isSelected(item)">
+          <div class="row form-group">
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <div class="listing-pic">
+                <img *ngIf="item.listing?.picture_url" [src]="item.listing?.picture_url"
+                     class="img-circle"/><!-- add *ngIf to fix issue #002 console error: GET http://localhost:4200/null 404 (Not Found)-->
+              </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-10">
+              <div class="row form-group">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  {{item.listing?.name}}
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  {{item.listing?.public_address}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+    </div>
+    <div class="viewport col-md-6 col-sm-6 col-xs-6">
+      <h3>Reviews</h3>
+      <div *ngFor="let review of rbnbReviews?.reviews">
+        <div class="row form-group">
+          <div class="col-md-2 col-sm-2 hidden-xs">
+            <div class="listing-pic">
+              <img *ngIf="review.author?.picture_url" [src]="review.author?.picture_url"
+                   class="img-circle"/><!-- add *ngIf to fix issue #002 console error: GET http://localhost:4200/null 404 (Not Found)-->
+            </div>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <div class="row form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12 email">
+                {{review.created_at|date}}
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                {{review.comments}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

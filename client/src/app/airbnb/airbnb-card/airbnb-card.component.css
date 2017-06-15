@@ -1,0 +1,13 @@
+.listing-pic img {
+  width: 70px;
+  height:70px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.active.row {
+  background-color: lavender;
+}
+.enable-hover.row:hover {
+  background-color: lavender;
+}

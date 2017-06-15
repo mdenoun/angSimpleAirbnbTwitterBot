@@ -1,0 +1,5 @@
+<div>
+  <select #sel (change)="select.emit(sel.value)" >
+    <option *ngFor="let item of items">{{item}}</option>
+  </select>
+</div>

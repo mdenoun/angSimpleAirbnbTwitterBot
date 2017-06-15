@@ -8,7 +8,7 @@
             <div class="col-md-2 col-sm-2 hidden-xs">
               <div class="listing-pic">
                 <img *ngIf="item.listing?.picture_url" [src]="item.listing?.picture_url"
-                     class="img-circle"/><!-- add *ngIf to fix issue #002 console error: GET http://localhost:4200/null 404 (Not Found)-->
+                     class="img-circle"/>
               </div>
             </div>
             <div class="col-md-10 col-sm-10 col-xs-10">
@@ -33,7 +33,7 @@
           <div class="col-md-2 col-sm-2 hidden-xs">
             <div class="listing-pic">
               <img *ngIf="review.author?.picture_url" [src]="review.author?.picture_url"
-                   class="img-circle"/><!-- add *ngIf to fix issue #002 console error: GET http://localhost:4200/null 404 (Not Found)-->
+                   class="img-circle"/>
             </div>
           </div>
           <div class="col-md-10 col-sm-10 col-xs-10">

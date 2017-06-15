@@ -24,7 +24,12 @@ export class AirbnbComponent implements OnInit {
 
     this.service.getRbnbItems(city)
       .subscribe(
-        result => {this.rbnbItems = result['search_results'];if(this.rbnbItems.length>0) this.displayReview(this.rbnbItems[0])},
+        result => {
+          this.rbnbItems = result['search_results'];
+          if(this.rbnbItems.length>0) {
+            this.displayReview(this.rbnbItems[0]);
+          }
+        },
         error =>  {this.errorMessage = <any>error; console.log(error)});
   }
 
